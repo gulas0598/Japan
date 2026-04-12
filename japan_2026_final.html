@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan 2026 — Trip Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --osaka:#8B5E3C;
+  --osaka-l:#FDF6EE;
+  --osaka-m:#E8D5BE;
+  --hiroshima:#2D6A4F;
+  --hiroshima-l:#EEF7F2;
+  --hiroshima-m:#A8D5BF;
+  --kyoto:#8B3A3A;
+  --kyoto-l:#FDF0F0;
+  --kyoto-m:#E8BEBE;
+  --tokyo:#2B4B8B;
+  --tokyo-l:#EEF2FD;
+  --tokyo-m:#A8B8E8;
+  --ink:#1C1C1E;
+  --ink2:#48484A;
+  --ink3:#8E8E93;
+  --ink4:#C7C7CC;
+  --bg:#FAFAF8;
+  --white:#FFFFFF;
+  --halal:#1A6B3C;
+  --halal-l:#EAF5EF;
+  --border:#E5E5EA;
+  --shadow:0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── HERO ── */
+.hero{position:relative;height:100vh;min-height:580px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0;background:linear-gradient(135deg,#1C1C1E 0%,#2C2C2E 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%)}
+.hero-content{position:relative;padding:48px 48px 52px;width:100%;max-width:900px;margin:0 auto}
+.hero-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:16px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(52px,8vw,96px);font-weight:400;color:#fff;line-height:1;margin-bottom:24px}
+.hero h1 span{font-style:italic;color:rgba(255,255,255,0.6)}
+.hero-pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.hero-pill{font-size:12px;font-weight:500;padding:7px 16px;border-radius:100px;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);text-decoration:none;cursor:pointer;transition:all 0.15s;background:rgba(255,255,255,0.06)}
+.hero-pill:hover{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.5);color:#fff}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15)}
+.hero-stat-v{font-size:22px;font-weight:600;color:#fff}
+.hero-stat-l{font-size:11px;color:rgba(255,255,255,0.45);margin-top:1px;letter-spacing:0.06em;text-transform:uppercase}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 48px;display:flex;gap:0;overflow-x:auto}
+.nav-tab{font-size:12px;font-weight:500;padding:14px 18px;color:var(--ink3);border-bottom:2px solid transparent;text-decoration:none;white-space:nowrap;transition:all 0.15s;letter-spacing:0.04em}
+.nav-tab:hover{color:var(--ink)}
+.t-osaka{border-color:transparent}.t-osaka.on,.t-osaka:hover{color:var(--osaka);border-color:var(--osaka)}
+.t-hiroshima{border-color:transparent}.t-hiroshima.on,.t-hiroshima:hover{color:var(--hiroshima);border-color:var(--hiroshima)}
+.t-kyoto{border-color:transparent}.t-kyoto.on,.t-kyoto:hover{color:var(--kyoto);border-color:var(--kyoto)}
+.t-tokyo{border-color:transparent}.t-tokyo.on,.t-tokyo:hover{color:var(--tokyo);border-color:var(--tokyo)}
+
+/* ── MAIN WRAP ── */
+.main{max-width:900px;margin:0 auto;padding:0 48px 80px}
+
+/* ── FLIGHT CARD ── */
+.flight-card{background:var(--ink);color:#fff;border-radius:16px;padding:24px 28px;margin:40px 0 0;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.flight-route{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.flight-arr{color:rgba(255,255,255,0.35)}
+.flight-legs{flex:1}
+.flight-leg{font-size:12px;color:rgba(255,255,255,0.55);padding:3px 0;display:flex;gap:8px;align-items:baseline}
+.flight-leg b{color:rgba(255,255,255,0.9);font-weight:500}
+
+.halal-banner{display:flex;gap:12px;align-items:flex-start;padding:14px 18px;background:var(--halal-l);border:1px solid rgba(26,107,60,0.2);border-radius:12px;font-size:13px;color:var(--ink2);margin-top:16px;line-height:1.5}
+.halal-banner strong{color:var(--halal)}
+
+/* ── CITY SECTION ── */
+.city-section{margin-top:72px}
+
+.city-banner{position:relative;border-radius:20px;overflow:hidden;margin-bottom:32px;height:220px}
+.city-banner img{width:100%;height:100%;object-fit:cover;display:block}
+.city-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.2) 70%)}
+.city-banner-text{position:absolute;bottom:0;left:0;padding:24px 28px}
+.city-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px}
+.city-name{font-family:'Playfair Display',serif;font-size:42px;font-weight:400;color:#fff;line-height:1}
+.city-sub{font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px}
+.city-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);margin-right:6px;margin-top:8px}
+
+/* ── DAY CARD ── */
+.day-card{background:var(--white);border:1px solid var(--border);border-radius:16px;margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow);transition:box-shadow 0.2s}
+.day-card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.08),0 8px 24px rgba(0,0,0,0.06)}
+
+.day-header{display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.day-date-box{width:52px;height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.day-date-n{font-size:22px;font-weight:700;line-height:1}
+.day-date-m{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.7;margin-top:1px}
+.day-info{flex:1;min-width:0}
+.day-title{font-size:15px;font-weight:600;color:var(--ink)}
+.day-meta{font-size:12px;color:var(--ink3);margin-top:2px}
+.day-caret{color:var(--ink4);flex-shrink:0;transition:transform 0.22s}
+.day-card.open .day-caret{transform:rotate(180deg)}
+
+/* ── DAY BODY ── */
+.day-body{display:none;border-top:1px solid var(--border)}
+.day-card.open .day-body{display:block}
+
+/* ── STOP FLOW ── */
+/* The core design: numbered stops with clear transport between them */
+.stop-flow{padding:20px 22px 8px}
+
+.stop{display:flex;gap:0;margin-bottom:0}
+.stop-left{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0}
+.stop-number{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;color:#fff}
+.stop-vline{flex:1;width:2px;min-height:12px;margin:4px 0}
+
+.move{display:flex;gap:0;margin-bottom:0}
+.move-left{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0}
+.move-icon-wrap{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;border:1px dashed}
+.move-vline{flex:1;width:2px;min-height:8px;margin:3px 0}
+
+.stop-right{flex:1;padding-bottom:18px}
+.move-right{flex:1;padding:6px 0 10px}
+
+.stop-name{font-size:14px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.stop-desc{font-size:13px;color:var(--ink2);line-height:1.55}
+.stop-dur{font-size:11px;font-weight:600;color:var(--ink3);background:var(--bg);border:1px solid var(--border);padding:2px 8px;border-radius:100px;white-space:nowrap}
+.stop-fact{margin-top:8px;font-size:12px;color:var(--ink3);background:var(--bg);border-left:3px solid var(--ink4);padding:6px 10px;border-radius:0 6px 6px 0;line-height:1.5}
+.stop-fact em{color:var(--ink2);font-style:normal;font-weight:500}
+
+.move-label{font-size:12px;font-weight:600;color:var(--ink2)}
+.move-detail{font-size:12px;color:var(--ink3);margin-top:1px;line-height:1.45}
+.move-time{font-size:11px;font-weight:600;margin-top:3px;padding:2px 8px;border-radius:100px;display:inline-block}
+
+/* STATUS TAGS */
+.tag-booked{font-size:10px;font-weight:700;letter-spacing:0.06em;padding:2px 8px;border-radius:100px;background:#EAF5EF;color:var(--halal)}
+.tag-book{font-size:10px;font-weight:700;letter-spacing:0.06em;padding:2px 8px;border-radius:100px;background:#FEF0ED;color:#C0392B}
+.tag-check{font-size:10px;font-weight:700;letter-spacing:0.06em;padding:2px 8px;border-radius:100px;background:#FEF9E7;color:#8B6914}
+.tag-tip{font-size:10px;font-weight:700;letter-spacing:0.06em;padding:2px 8px;border-radius:100px;background:var(--bg);border:1px solid var(--border);color:var(--ink3)}
+
+/* HALAL BLOCK */
+.halal-block{margin:4px 22px 18px;background:var(--halal-l);border:1px solid rgba(26,107,60,0.15);border-radius:12px;overflow:hidden}
+.halal-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:none;border:none;cursor:pointer;text-align:left}
+.halal-toggle-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--halal)}
+.halal-caret{color:var(--halal);transition:transform 0.2s;font-size:12px}
+.halal-block.open .halal-caret{transform:rotate(180deg)}
+.halal-body{display:none;padding:0 16px 14px}
+.halal-block.open .halal-body{display:block}
+.halal-hdr{display:none}
+.halal-row{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid rgba(26,107,60,0.08)}
+.halal-row:last-child{border-bottom:none;padding-bottom:0}
+.halal-dot{width:7px;height:7px;border-radius:50%;background:var(--halal);flex-shrink:0;margin-top:5px}
+.halal-name{font-size:13px;font-weight:600;color:var(--ink)}
+.halal-desc{font-size:12px;color:var(--ink3);margin-top:2px;line-height:1.45}
+.halal-cert{font-size:10px;font-weight:700;padding:1px 7px;border-radius:100px;border:1px solid rgba(26,107,60,0.3);color:var(--halal);flex-shrink:0}
+
+/* NOTE STRIP */
+.note-strip{margin:0 22px 16px;font-size:12px;color:var(--ink3);padding:10px 14px;background:var(--bg);border-radius:10px;line-height:1.55;border:1px solid var(--border)}
+.booking-strip{margin:12px 22px 0;font-size:12px;font-weight:500;padding:10px 14px;border-radius:10px;display:flex;align-items:flex-start;gap:8px}
+.booking-strip.ok{background:#EAF5EF;color:var(--halal)}
+.booking-strip.go{background:#FEF0ED;color:#C0392B}
+
+/* PHOTO STRIP */
+.photo-strip{display:flex;gap:8px;padding:14px 22px 0;overflow-x:auto;scrollbar-width:none}
+.photo-strip::-webkit-scrollbar{display:none}
+.photo-thumb{height:100px;width:150px;border-radius:10px;overflow:hidden;flex-shrink:0}
+.photo-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero-content,.nav-inner,.main{padding-left:20px;padding-right:20px}
+  .hero h1{font-size:48px}
+  .city-banner{height:160px}
+  .city-name{font-size:32px}
+  .flight-card{gap:16px}
+}
+
+.food-tips{margin:4px 22px 12px;padding:12px 16px;background:#FFFBF0;border:1px solid #F0D070;border-radius:12px}
+.food-tips-hdr{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8B6914;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.food-tip-row{font-size:12px;color:#5C4A00;padding:4px 0;border-bottom:1px solid rgba(240,208,112,0.3);line-height:1.5}
+.food-tip-row:last-child{border-bottom:none;padding-bottom:0}
+.food-tip-row strong{color:#3D2E00}
+.food-inline{display:flex;align-items:flex-start;gap:8px;margin-top:8px;padding:8px 10px;background:#FFFBF0;border:1px solid #F0D070;border-radius:8px;font-size:12px;color:#5C4A00;line-height:1.5}
+.food-inline strong{color:#3D2E00;font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Trip guide · April – May 2026</div>
+    <h1>Japan<br><span>16 days</span></h1>
+    <div class="hero-pills">
+      <a class="hero-pill" href="#osaka">Osaka</a>
+      <a class="hero-pill" href="#hiroshima">Hiroshima</a>
+      <a class="hero-pill" href="#kyoto">Kyoto</a>
+      <a class="hero-pill" href="#tokyo">Tokyo</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-v">17 Apr</div><div class="hero-stat-l">Depart Riyadh</div></div>
+      <div><div class="hero-stat-v">2 May</div><div class="hero-stat-l">Return flight</div></div>
+      <div><div class="hero-stat-v">4 cities</div><div class="hero-stat-l">Osaka · Hiroshima · Kyoto · Tokyo</div></div>
+      <div><div class="hero-stat-v">2 pax</div><div class="hero-stat-l">Travellers</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-tab t-osaka" href="#osaka">Osaka</a>
+    <a class="nav-tab t-hiroshima" href="#hiroshima">Hiroshima</a>
+    <a class="nav-tab t-kyoto" href="#kyoto">Kyoto</a>
+    <a class="nav-tab t-tokyo" href="#tokyo">Tokyo</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <!-- ARRIVAL FLIGHT -->
+  <div class="flight-card">
+    <div class="flight-route">RUH <span class="flight-arr">→</span> KIX</div>
+    <div class="flight-legs">
+      <div class="flight-leg"><b>16 Apr</b> RUH → DXB · 17:05–20:20 · Emirates · 6h55 layover</div>
+      <div class="flight-leg"><b>17 Apr</b> DXB → PVG · 03:15–15:30 · Emirates · 2h50 layover</div>
+      <div class="flight-leg"><b>17 Apr</b> PVG → KIX · 18:20–21:35 · All Nippon Airways</div>
+    </div>
+  </div>
+
+  <div class="halal-banner">
+    <span style="font-size:18px;flex-shrink:0">☪</span>
+    <div><strong>Halal travel:</strong> Download <strong>Halal Gourmet Japan</strong> and <strong>Halal Navi</strong> before you fly — GPS-based halal restaurant search across all cities. Tokyo alone has 300+ certified halal spots. For rural areas (like Mount Fuji), pack food from a city halal spot. <strong>Key transport costs:</strong> Osaka→Hiroshima ¥21,500 · Hiroshima→Kyoto ¥23,480 · Kyoto→Tokyo ¥28,340 · Mt Fuji bus ¥9,200 (all for 2).</div>
+  </div>
+
+  <!-- ══════════════ OSAKA ══════════════ -->
+  <section class="city-section" id="osaka">
+    <div class="city-banner">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#3D1A0A 0%,#7A3520 40%,#C4623A 100%)"></div>
+      <div class="city-banner-overlay"></div>
+      <div class="city-banner-text">
+        <div class="city-eyebrow">Days 1–3 · 17–19 April</div>
+        <div class="city-name">Osaka</div>
+        <div class="city-sub">Granbell Hotel · 3 nights · Japan's food capital</div>
+        <span class="city-tag">Arrive 21:35</span>
+        <span class="city-tag">Universal Studios</span>
+        <span class="city-tag">Depart 20 Apr 10:41</span>
+      </div>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF6EE">
+          <div class="day-date-n" style="color:var(--osaka)">17</div>
+          <div class="day-date-m" style="color:var(--osaka)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Arrival day</div>
+          <div class="day-meta">Friday · Land 21:35 · Easy first night</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">1</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kansai International Airport <span class="stop-dur">Land 21:35</span></div>
+              <div class="stop-desc">Collect luggage and get your Suica IC card at the airport — works on all transport across Japan for the whole trip.</div>
+              <div class="stop-fact">💡 <em>Buy Suica here.</em> Load ¥5,000 to start. Tap in and out of every metro, JR line, and bus for 16 days. No ticket machines ever again.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Nankai Limited Express → change → Sakaisuji Line</div>
+              <div class="move-detail">Kansai Airport Stn → Tengachaya (change platforms) → Sakaisuji Hommachi · ~50 min · ¥1,730/person</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">~50 min · ¥1,730</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">2</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Granbell Hotel — Check in</div>
+              <div class="stop-desc">Drop bags, freshen up. Dotonbori is 5 minutes on foot — even a short walk tonight to feel the Osaka energy is worth it. The neon canal never sleeps.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF6EE;border:1px solid #8B5E3C30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B5E3C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B5E3C">Granbell Hotel Osaka</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">You're already here — welcome to Japan! 🎌</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Tonight — konbini is the move</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏪 7-Eleven or FamilyMart near the hotel</div>
+              <div class="halal-desc">You'll arrive at the hotel around 23:00–23:30 — everything else is closed. Grab tuna or salmon onigiri (avoid pork fillings), an egg sandwich, and a warm drink from the machine. Save your appetite for the big Day 2 food plan.</div>
+            </div>
+            <span class="halal-cert">Konbini</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF6EE">
+          <div class="day-date-n" style="color:var(--osaka)">18</div>
+          <div class="day-date-m" style="color:var(--osaka)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Osaka city day</div>
+          <div class="day-meta">Saturday · Castle · Shinsekai · Dotonbori at night</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:#8B5E3C40;color:#8B5E3C">🏨</div>
+              <div class="move-vline" style="background:#8B5E3C30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Granbell Hotel → Osaka Castle</div>
+              <div class="move-detail">Tanimachi Line from Sakaisuji Hommachi → Tanimachi 4-chome · 3 stops · ~10 min · Walk 10 min to castle</div>
+              <div class="food-inline">🏪 <span><strong>Before you leave the hotel</strong> — grab breakfast at the 7-Eleven nearby. Tuna/salmon onigiri + egg sandwich. Nothing is open near the castle at this hour.</span></div>
+              <span class="move-time" style="background:#FDF6EE;color:#8B5E3C">~20 min total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">1</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Osaka Castle <span class="stop-dur">1.5–2 hrs</span></div>
+              <div class="stop-desc">16th-century castle with panoramic views of the city. Museum inside traces the castle's turbulent history — worth 30 extra minutes. The moat and stone walls are impressive even from outside.</div>
+              <div class="stop-fact">🏯 <em>Fun fact:</em> The castle has been destroyed and rebuilt three times. The current structure dates to 1931 — but the stone walls are original 16th century masonry.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚶</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk south through the park</div>
+              <div class="move-detail">20 min walk south from the castle through Osaka Mint gardens</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">20 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">2</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shitennō-ji Temple <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">One of Japan's oldest temples, founded in 593 AD. Free outer grounds, small fee for the garden. Tranquil pond and stone lanterns.</div>
+              <div class="stop-fact">⛩️ <em>Fun fact:</em> This is Japan's first Buddhist temple, built by Prince Shotoku. It predates Kyoto's famous temples by 200 years.
+              <div class="food-inline">🗼 <span><strong>Next up — Shinsekai:</strong> No food stops between here and Shinsekai. Keep going.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Tanimachi Line south 2 stops</div>
+              <div class="move-detail">Shitennojimae Yuhigaoka → Ebisucho Station · 4 min · Shinsekai is a 5 min walk from exit</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">~10 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">3</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shinsekai + Tsutenkaku Tower <span class="stop-dur">1–1.5 hrs</span></div>
+              <div class="stop-desc">Retro 1950s neighbourhood. Eat kushikatsu here — Osaka's signature deep-fried skewers on sticks. Rule: <strong>never double-dip.</strong> Tsutenkaku Tower has city views if time allows.</div>
+              <div class="stop-fact">🍢 <em>Fun fact:</em> Kushikatsu restaurants have a "no double dipping" rule so sacred that many display angry cartoon signs about it. Take it seriously.
+              <div class="food-inline">🚃 <span><strong>~13:30 — metro south now:</strong> Ebisucho → Shinsaibashi (Sakaisuji Line, 4 stops, ~8 min). Your food run starts there — SAKImoto Bakery first at ~14:00.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sakaisuji Line to Namba (or 20 min walk north)</div>
+              <div class="move-detail">Ebisucho → Namba Station · 4 stops · ~8 min</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">8 min metro</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">4</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Sumo Hall Hirakuza <span class="stop-dur">30–45 min</span></div>
+              <div class="stop-desc">Osaka's sumo venue near Namba. Check if any events or exhibitions are showing. Even without a match, the area is worth a look.
+              <div class="food-inline">☕ <span><strong>~14:00 — SAKImoto Bakery</strong> is nearby in Shinsaibashi. Shokupan egg sandwich. Then grab a <strong>10 Yen Bread</strong> on the walk south, and <strong>Halal Honolu Grande Shinsaibashi</strong> for halal takoyaki + okonomiyaki at ~15:00.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚶</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min to Hozenji Yokocho, then 5 min to Dotonbori</div>
+              <div class="move-detail">Everything in this area is within a 10 min walkable loop. Do Hozenji → Dotonbori → America-mura in order.</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">Walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">5</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hozenji Yokocho <span class="stop-dur">20 min</span></div>
+              <div class="stop-desc">Hidden moss-covered alley with tiny traditional restaurants. The stone lanterns glow at night. Very different energy to the main streets.</div>
+              <div class="stop-fact">🪨 <em>Fun fact:</em> The famous moss-covered Fudo statue at the alley entrance is splashed with water by visitors for good luck — it's been going for 100 years and the moss is now several inches thick.
+              <div class="food-inline">🐟 <span><strong>~16:30 — Salmon Kat Namba:</strong> 1.5 hrs after Honolu is enough. Basement spot — bring cash.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚶</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min to Dotonbori</div>
+              <div class="move-right"></div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">5 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">6</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Dotonbori + Ebisubashi Bridge <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">The Glico running man sign, neon canal reflections. Cross Ebisubashi bridge for the classic photo. Best at night.</div>
+              <div class="stop-fact">🏃 <em>Fun fact:</em> The Glico running man has been on this spot since 1935 — and every time Hanshin Tigers win the Japan Series, fans jump off this exact bridge in celebration.</div>
+              <div class="food-inline">🧀 <span><strong>~17:30 — Rikuro's Namba</strong> is right here. Grab a jiggly cheesecake slice while walking — baked fresh every 15 min. Just a sweet bite.</span></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚶</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 10 min northwest</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">10 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">7</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">America-mura <span class="stop-dur">30 min</span></div>
+              <div class="stop-desc">Trendy vintage and streetwear district. Good for a browse before dinner.</div>
+              <div class="food-inline">🥩 <span><strong>Dinner at ~20:00 — A5 Wagyu Osaka Panga.</strong> Book your table before the evening stroll if you haven't already.</span></div>
+              <div class="stop-fact">💡 On the way back to the hotel tonight, stop at a 7-Eleven or FamilyMart to grab breakfast for tomorrow — USJ is a full day and you'll want to leave early. Tuna/salmon onigiri or an egg sandwich is perfect. <em>Early departure: the park gets very busy — arriving before 09:00 matters.</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF6EE;border:1px solid #8B5E3C30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B5E3C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B5E3C">Granbell Hotel Osaka</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">10 min walk or short metro from America-mura.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏪 Breakfast · 7-Eleven near hotel</div>
+              <div class="halal-desc">Before heading to the castle. Tuna or salmon onigiri, egg sandwich, coffee. Quick and easy — straight to Osaka Castle after.</div>
+            </div>
+            <span class="halal-cert">Konbini</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🚃 Metro south to Shinsaibashi after Shinsekai (~13:30)</div>
+              <div class="halal-desc">Castle → Shitennoji → Shinsekai → Sumo Hall takes the whole morning. Metro south from Ebisucho to Shinsaibashi · Sakaisuji Line · 4 stops · ~8 min.</div>
+            </div>
+            <span class="halal-cert">Transit</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">☕ ~14:00 · SAKImoto Bakery</div>
+              <div class="halal-desc">Near Shinsaibashi · Famous shokupan egg sandwich · light and refined · perfect first proper food stop after the morning sights.</div>
+            </div>
+            <span class="halal-cert">Bakery</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍞 ~14:30 · 10 Yen Bread</div>
+              <div class="halal-desc">Grab one while walking towards Namba. Coin-shaped bread for ¥10 — cheap, fun, very Osaka.</div>
+            </div>
+            <span class="halal-cert">Snack</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🐙 ~15:00 · Halal Honolu Grande Shinsaibashi</div>
+              <div class="halal-desc">Halal takoyaki + okonomiyaki · certified halal · 6 min walk from Shinsaibashi Station. Try both — they're small portions.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🐟 ~16:30 · Salmon Kat Namba</div>
+              <div class="halal-desc">1.5 hr gap after Honolu — enough breathing room. Basement spot · salmon chirashi bowl · ~¥2,000–3,000 · <strong>Bring cash</strong> (card signal unreliable in basement) · Pure seafood, halal-safe.</div>
+            </div>
+            <span class="halal-cert">Seafood</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🧀 ~17:30 · Rikuro's Namba Main Branch</div>
+              <div class="halal-desc">Just a slice — not a meal, a sweet punctuation. Jiggly cheesecake baked fresh every 15 min · grab while strolling Namba/Dotonbori · egg and dairy only. ⚠️ Verify no alcohol in recipe.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏮 ~18:00 · Hozenji Yokocho → Dotonbori → America-mura</div>
+              <div class="halal-desc">Evening stroll — let the food settle before dinner.</div>
+            </div>
+            <span class="halal-cert">Sights</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 ~20:00 · A5 Wagyu Osaka Panga</div>
+              <div class="halal-desc">Certified halal A5 wagyu · ¥10,000+ · The Osaka splurge · Closes 22:30 · <strong>Book a table for 20:00–20:30 in advance.</strong></div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF6EE">
+          <div class="day-date-n" style="color:var(--osaka)">19</div>
+          <div class="day-date-m" style="color:var(--osaka)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Universal Studios Japan</div>
+          <div class="day-meta">Sunday · Full day · Go early</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ Booked — USJ with Express Pass (4 rides) · €143/person</div>
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">1</div>
+              <div class="stop-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Leave hotel by 06:51 <span class="stop-dur">~34 min journey</span></div>
+              <div class="stop-desc">Walk ~7 min to Sakaisuji Hommachi Station. Total journey ¥420/person — arrive at USJ gates by 07:25 before the crowds.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">① Chuo Line (Local Cosmo Square)</div>
+              <div class="move-detail">Sakaisuji Hommachi → Bentencho · 4 stops · 8 min · arr. ~07:06</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">8 min</span>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">② Osaka Loop Line (Yamatoji Rapid)</div>
+              <div class="move-detail">Bentenchō → Nishikujo · no stops · 2 min · arr. ~07:17</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">2 min</span>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF6EE;border-color:var(--osaka-m);color:var(--osaka)">🚃</div>
+              <div class="move-vline" style="background:var(--osaka-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">③ JR Yumesaki Line (Local Sakurajima)</div>
+              <div class="move-detail">Nishikujo → Universal-City Station · 2 stops · 5 min · arr. ~07:20 → walk to gates</div>
+              <span class="move-time" style="background:#FDF6EE;color:var(--osaka)">5 min · ¥420 total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--osaka)">2</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Universal Studios Japan <span class="stop-dur">Full day · 8+ hrs</span> <span class="tag-booked">BOOKED</span></div>
+              <div class="stop-desc">Express Pass covers 4 rides — prioritise Wizarding World of Harry Potter (+ Flying Dinosaur) and Hollywood Dream coaster. Arrive at opening (08:30 or 09:00) for the shortest waits on everything else.</div>
+              <div class="stop-fact">⚡ <em>Fun fact:</em> USJ's Wizarding World is one of only 4 in the world, and it's the only one where you can buy Butterbeer in a hot version — unique to Japan. It's non-alcoholic.</div>
+            </div>
+          </div>
+        </div>
+        <div class="note-strip">💡 On the way back tonight, stop at a supermarket or convenience store (7-Eleven / FamilyMart) to buy breakfast for tomorrow — early train to Hiroshima departs at 10:41.</div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF6EE;border:1px solid #8B5E3C30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B5E3C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B5E3C">Granbell Hotel Osaka</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">JR Yumesaki → Osaka → Namba. ~25 min. Last night in Osaka.</div>
+          </div>
+        </div>
+       
+      
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍞 Morning · grab and go before 06:51</div>
+              <div class="halal-desc">Konbini onigiri (tuna or salmon) from the night before, or 10 Yen Bread / Daiou Cheese Jyu-en Pan on the walk to Sakaisuji Hommachi Station. Nothing proper will be open at this hour.</div>
+            </div>
+            <span class="halal-cert">Konbini</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🎢 Inside USJ · seafood and vegetarian only</div>
+              <div class="halal-desc">Fish tempura, vegetable sets, and egg dishes are your safest bets at park restaurants. Butterbeer is non-alcoholic and fine. Avoid meat dishes unless confirmed halal by staff on the day.</div>
+            </div>
+            <span class="halal-cert">Caution</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🌙 Dinner · no fixed plan</div>
+              <div class="halal-desc">Back early (before 22:30) → <strong>Halal Ramen Naniwaya</strong> ⭐4.6 · certified halal · Namba · no reservation needed. Back late → konbini, no stress. Either way, stop at a supermarket to buy breakfast for the early Hiroshima train tomorrow (departs 10:41).</div>
+            </div>
+            <span class="halal-cert">Flexible</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ HIROSHIMA ══════════════ -->
+  <section class="city-section" id="hiroshima">
+    <div class="city-banner">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#0A2E1F 0%,#1A5C40 40%,#2E8B6A 100%)"></div>
+      <div class="city-banner-overlay"></div>
+      <div class="city-banner-text">
+        <div class="city-eyebrow">Days 4–5 · 20–21 April</div>
+        <div class="city-name">Hiroshima</div>
+        <div class="city-sub">Via Inn Hiroshima · 1 night · Miyajima Island</div>
+        <span class="city-tag">Arrive 12:02</span>
+        <span class="city-tag">Miyajima ferry</span>
+        <span class="city-tag">Depart 21 Apr 17:12</span>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF7F2">
+          <div class="day-date-n" style="color:var(--hiroshima)">20</div>
+          <div class="day-date-m" style="color:var(--hiroshima)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Arrive + Miyajima Island</div>
+          <div class="day-meta">Monday · Train 10:41→12:02 · Afternoon island</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">1</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shinkansen from Osaka <span class="stop-dur">Depart 10:41</span></div>
+              <div class="stop-desc"><strong>Nozomi 15</strong> — Shin-Osaka 10:41 → Hiroshima 12:02 · Car 4 · Seats 20-A & 20-B. Walk to Shin-Osaka Station (change from Osaka Sta., 1 stop on loop line, arrive 10 min before departure).</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚄</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Nozomi 15 Shinkansen</div>
+              <div class="move-detail">Shin-Osaka → Hiroshima · Reserved seats · Car 4 · 20-A & 20-B</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">1h 21min · arrive 12:02</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">2</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hotel — Drop bags</div>
+              <div class="stop-desc">Via Inn Hiroshima Shinkansenguchi is steps from the station. Drop bags, grab a quick lunch, head straight to Miyajima.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">⛴️</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">JR San-yo Line → JR Miyajima Ferry</div>
+              <div class="move-detail">Hiroshima Stn → Miyajimaguchi Stn (San-yo Line, 9 stops, ~26 min) → walk 5 min to JR Ferry pier → 10 min crossing to island</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">~45 min total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">3</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Itsukushima Shrine <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">The floating torii gate. Check tide times before going — high tide means the gate appears to float on the sea, low tide means you can walk up to it. Both are worth seeing, just different experiences.</div>
+              <div class="food-inline">🦪 <span><strong>Oyster stalls on Omotesando Street</strong> — right as you walk off the ferry. Fresh grilled Hiroshima oysters, Japan's best. Halal-safe, pure shellfish. Cash only.</span></div>
+              <div class="food-inline">🥞 <span><strong>Mukougawa Pancake</strong> also on the island for something more filling. ⭐4.9 · ¥3,000–4,000</span></div>
+              <div class="stop-fact">⛩️ <em>Fun fact:</em> The torii gate stands in the sea because the island was considered so sacred that ordinary people weren't allowed to set foot on it — they had to approach by boat through the gate.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚶</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 15 min uphill</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">15 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">4</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Daishoin Temple <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Buddhist complex with stone lanterns, mossy paths, and spinning prayer wheels. Much quieter than the shrine. Walk up through the steps lined with lanterns.</div>
+              <div class="stop-fact">🔔 <em>Fun fact:</em> Each spinning prayer wheel you touch is said to have the same effect as reading the entire Buddhist scripture once. Spin them all.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚶</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min adjacent</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">5 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">5</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Henjo Caves <span class="stop-dur">20–30 min</span></div>
+              <div class="stop-desc">A dark cave path lit by hundreds of lanterns. Eerie and beautiful — one of Miyajima's hidden highlights. Go through slowly.</div>
+              <div class="food-inline">🥩 <span><strong>Back in Hiroshima for dinner — Halal Wagyu Yakiniku Panga.</strong> Opens 5PM, certified halal. This is your one dinner in Hiroshima — book ahead.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#EEF7F2;border:1px solid #2D6A4F30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#2D6A4F;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2D6A4F">Via Inn Hiroshima Shinkansenguchi</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Ferry back to Miyajimaguchi → JR to Hiroshima Stn → 5 min walk. ~50 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🦪 On Miyajima · Oyster stalls (Omotesando Street)</div>
+              <div class="halal-desc">Fresh grilled Hiroshima oysters right off the boat along the main street. Japan's oyster capital — don't skip these. Halal-safe (pure shellfish). Cash only at most stalls.</div>
+            </div>
+            <span class="halal-cert">Halal-safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥞 On Miyajima · Mukougawa Pancake</div>
+              <div class="halal-desc">⭐4.9 · ¥3,000–4,000 · If you want something more substantial on the island. Pure egg and dairy.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Dinner · Halal Wagyu Yakiniku Panga</div>
+              <div class="halal-desc">⭐4.8 · Certified halal · Opens 5PM · Book ahead · Back in Hiroshima city after the island. Your one dinner in Hiroshima — make it count.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏙️ Optional walk · Okonomimura</div>
+              <div class="halal-desc">On the way to/from Panga. 3-floor building with ~25 okonomiyaki stalls — great atmosphere even just to walk through. ⚠️ Sauce usually contains non-halal ingredients — specify vegetarian with no sauce if eating.</div>
+            </div>
+            <span class="halal-cert">Caution</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF7F2">
+          <div class="day-date-n" style="color:var(--hiroshima)">21</div>
+          <div class="day-date-m" style="color:var(--hiroshima)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Peace Memorial → Kyoto</div>
+          <div class="day-meta">Tuesday · Morning city · Train 17:12</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:#2D6A4F40;color:#2D6A4F">🏨</div>
+              <div class="move-vline" style="background:#2D6A4F30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Via Inn Hiroshima → Hiroshima Castle</div>
+              <div class="move-detail">20 min walk north from hotel, or tram from Hiroshima Station → Kamiyacho-nishi · 3 stops · ¥190</div>
+              <span class="move-time" style="background:#EEF7F2;color:#2D6A4F">20 min walk · or 10 min tram</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">1</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hiroshima Castle <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">Reconstructed castle with a good museum on feudal Hiroshima. 20 min walk from hotel, or take the tram.</div>
+              <div class="food-inline">🥞 <span><strong>Breakfast before this — Cafe Sou</strong> opens 10AM. Pancakes, relaxed start near the city centre. ⚠️ Verify halal on arrival.</span></div>
+
+              <div class="stop-fact">🏯 <em>Fun fact:</em> The original Hiroshima Castle was destroyed in the atomic bomb blast of 1945, despite being 2km from the hypocentre. Every building in the city was flattened.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚋</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Hiroshima tram → Peace Park</div>
+              <div class="move-detail">Hiroshima Electric Railway (lines 1/2/6) from Kamiyacho → Genbaku Dome-mae stop · ~15 min · ¥190. The Peace Memorial is a 5 min walk from the tram stop.</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">~15 min tram</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">2</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Peace Memorial Museum + Park + Atomic Bomb Dome <span class="stop-dur">2–2.5 hrs</span></div>
+              <div class="stop-desc">One of the most important and moving museums in the world. Allow at least 1.5 hours inside. The Atomic Bomb Dome just outside was the only structure left standing at the hypocentre. The Children's Peace Monument has millions of paper cranes.</div>
+              <div class="stop-fact">🕊️ <em>Fun fact:</em> The paper crane tradition comes from Sadako Sasaki, a 12-year-old who developed leukemia from radiation exposure and folded over 1,000 cranes. Her story inspired a nationwide tradition that continues today.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚶</div>
+              <div class="move-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">10 min walk east to Hondori</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">10 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--hiroshima)">3</div>
+              <div class="stop-vline" style="background:var(--hiroshima-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hondori Shopping Street + lunch <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">Hiroshima's main covered arcade — lunch and souvenirs. Try momiji manjū (maple-leaf shaped cakes filled with red bean paste) — Hiroshima's signature sweet.</div>
+              <div class="food-inline">🍜 <span><strong>Lunch here (~12:00) — Taiko Udon Minamoa</strong> ⭐4.7 is nearby. Opens 11AM. ⚠️ Verify dashi. Plenty of time before your 17:12 train.</span></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF7F2;border-color:var(--hiroshima-m);color:var(--hiroshima)">🚄</div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Nozomi 104 Shinkansen to Kyoto</div>
+              <div class="move-detail">Hiroshima Station → Kyoto Station · Car 4 · Seats 1-A & 1-B · 17:12 departure</div>
+              <span class="move-time" style="background:#EEF7F2;color:var(--hiroshima)">17:12 → 18:52 · 1h 40min</span>
+            </div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥞 Breakfast — Cafe Sou</div>
+              <div class="halal-desc">Opens 10AM · Pancakes · ¥1,000–2,000 · Relaxed start near city centre. ⚠️ Not certified halal — verify on arrival.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍜 Lunch — Taiko Udon Minamoa Hiroshima</div>
+              <div class="halal-desc">⭐4.7 · ¥1,000–2,000 · Opens 11AM · Plenty of time before your 17:12 train. ⚠️ Verify dashi stock.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🚄 Head to Hiroshima Station by 16:30</div>
+              <div class="halal-desc">Train departs 17:12 · Arrive Kyoto 18:52.</div>
+            </div>
+            <span class="halal-cert">Transit</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Dinner on arrival — Sushisakaba Sushitofuji</div>
+              <div class="halal-desc">⭐4.5 · Pure seafood · halal-safe · near Kyoto Station · relaxed first night · no reservation needed.</div>
+            </div>
+            <span class="halal-cert">Seafood</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ KYOTO ══════════════ -->
+  <section class="city-section" id="kyoto">
+    <div class="city-banner">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#2E0A0A 0%,#6B1F1F 40%,#A84040 100%)"></div>
+      <div class="city-banner-overlay"></div>
+      <div class="city-banner-text">
+        <div class="city-eyebrow">Days 6–9 · 21–25 April</div>
+        <div class="city-name">Kyoto</div>
+        <div class="city-sub">Via Inn Prime Kyoto Hachijo Exit · 5 nights · Imperial capital</div>
+        <span class="city-tag">Arrive 18:52</span>
+        <span class="city-tag">Private Onsen booked</span>
+        <span class="city-tag">Depart 26 Apr</span>
+      </div>
+    </div>
+
+    <!-- Day 5b - Kyoto Arrival -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF0F0">
+          <div class="day-date-n" style="color:var(--kyoto)">21</div>
+          <div class="day-date-m" style="color:var(--kyoto)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Arrive Kyoto</div>
+          <div class="day-meta">Tuesday · Train from Hiroshima 17:12 · Arrive 18:52</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:#8B3A3A40;color:#8B3A3A">🚄</div>
+              <div class="move-vline" style="background:#8B3A3A30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Nozomi 104 Shinkansen — Hiroshima → Kyoto</div>
+              <div class="move-detail">Hiroshima Station → Kyoto Station · Car 4 · Seats 1-A & 1-B · Depart 17:12 · Arrive 18:52 · 1h 40min</div>
+              <span class="move-time" style="background:#FDF0F0;color:#8B3A3A">17:12 → 18:52</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">1</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kyoto Station → Hotel <span class="stop-dur">~10 min walk</span></div>
+              <div class="stop-desc">Exit Kyoto Station via the Hachijo Exit (south side). Via Inn Prime Kyoto Hachijo Exit is a 3–5 min walk directly south of the station. Drop bags, freshen up, then head out for dinner — everything you need is within 10–15 min of the hotel.</div>
+              <div class="stop-fact">🏯 <em>Fun fact:</em> Kyoto Station is one of Japan's largest buildings — the main hall ceiling soars 60 metres high. The Hachijo Exit is on the quieter south side, away from the main tourist crowds.</div>
+              <div class="food-inline">🍣 <span><strong>Dinner tonight — Sushisakaba Sushitofuji.</strong> Pure seafood · halal-safe · ⭐4.5 · close to Kyoto Station · no reservation needed. Easy first night after travel.</span>
+              <div class="food-inline">🍽️ <span><strong>Dinner tonight — Honolu Grande Kyoto.</strong> ⭐4.7 · certified halal · takoyaki + okonomiyaki · relaxed post-onsen. No reservation needed.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">3–5 min walk south from Kyoto Station Hachijo Exit. 5 nights — welcome to Kyoto!</div>
+          </div>
+        </div>
+      </div>
+      <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Tonight — arrival dinner</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Dinner — Sushisakaba Sushitofuji</div>
+              <div class="halal-desc">⭐4.5 · Pure seafood · halal-safe · near Kyoto Station · relaxed first night after travel from Hiroshima · no reservation needed. Drop your bags and head straight there.</div>
+            </div>
+            <span class="halal-cert">Seafood</span>
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF0F0">
+          <div class="day-date-n" style="color:var(--kyoto)">22</div>
+          <div class="day-date-m" style="color:var(--kyoto)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Fushimi Inari + Gion + Kiyomizu-dera</div>
+          <div class="day-meta">Wednesday · South Kyoto → Gion evening</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:#8B3A3A40;color:#8B3A3A">🏨</div>
+              <div class="move-vline" style="background:#8B3A3A30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Via Inn Prime Kyoto → Fushimi Inari</div>
+              <div class="move-detail">Walk 6 min to Kyoto Station → JR Nara Line → Inari Station · 1 stop · 5 min · Walk 3 min to shrine gates</div>
+              <span class="move-time" style="background:#FDF0F0;color:#8B3A3A">~15 min total · ¥150</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">1</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Fushimi Inari Shrine <span class="stop-dur">1.5–2 hrs</span></div>
+              <div class="stop-desc">Thousands of orange torii gates winding up a forested mountain. Go early — ideally before 8am. The lower trail to Yotsutsuji viewpoint takes 30 min up and is the most iconic section. You don't need to go all the way to the top.</div>
+              <div class="stop-fact">⛩️ <em>Fun fact:</em> There are over 10,000 torii gates on this mountain, donated by businesses and individuals over centuries. Each one has the donor's name and donation date carved on the back.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚃</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">JR Nara Line → Karasuma Subway</div>
+              <div class="move-detail">Inari Stn → Kyoto Stn (JR, 1 stop, 3 min) → Shijo Stn (Karasuma subway, 2 stops, 5 min) · walk 5 min to Nishiki Market</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">~20 min total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">2</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Nishiki Market <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">"Kyoto's kitchen" — a 400m covered market alley. Try tamagoyaki (sweet rolled omelette), fresh tofu, pickled vegetables, and wagashi sweets. Halal-safe snacking: stick to egg, tofu, and fresh fruit stalls.</div>
+              <div class="stop-fact">🐡 <em>Fun fact:</em> Nishiki Market has existed on this exact spot for over 400 years. In the Edo period it was exclusively a fish market — the name means "brocade" because the stalls were arranged in colourful rows.
+              <div class="food-inline">🛒 <span><strong>Kyoto's Kitchen — snack here!</strong> Sashimi · matcha mochi · daifuku · takotamago · all halal-safe. Opens 10am.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 10 min east along the river to Pontocho</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">10 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">3</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Pontocho Alley <span class="stop-dur">30 min</span></div>
+              <div class="stop-desc">Narrow lantern-lit alley parallel to the Kamo River. Best at dusk. Tea houses and restaurants on both sides. Walk through slowly — it's only 500m long.
+              <div class="food-inline">🏮 <span><strong>Spontaneous snack territory.</strong> Seafood skewers from stalls generally safe. Great atmosphere — no fixed plan.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚌</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Bus 206 to Gion</div>
+              <div class="move-detail">Kawaramachi Sanjo stop → Gion stop · 5 min bus</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">5 min bus</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">4</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hanamikoji Street · Gion <span class="stop-dur">30 min</span></div>
+              <div class="stop-desc">The geisha district main street. Best at dusk — okiya (geisha houses) light up. Chances of spotting a geisha are highest between 17:30–19:00. No photos without permission.</div>
+              <div class="stop-fact">🎌 <em>Fun fact:</em> Kyoto's geisha (called "geiko" in local dialect) train for 5+ years before their debut. There are fewer than 200 active geiko in Kyoto today, compared to over 80,000 a century ago.
+              <div class="food-inline">🍣 <span><strong>~14:00 — Lunch at Genkaidon Kawaramachi.</strong> ⭐4.6 · ¥2,000–3,000 · seafood rice bowl · right in Kawaramachi area. ⚠️ Verify no pork stock.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 12 min through Sannenzaka & Ninenzaka lanes</div>
+              <div class="move-detail">This walk IS part of the sightseeing — the stone-paved lanes with wooden buildings are the route to Kiyomizu-dera</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">12 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">5</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kiyomizu-dera at sunset <span class="stop-dur">1–1.5 hrs</span> <span class="tag-check">Last entry 18:00</span></div>
+              <div class="stop-desc">Iconic wooden stage temple jutting out over the hillside. Time this for the last entry slot — views over Kyoto's rooftops at dusk are exceptional. The walk down through the lantern-lit lanes after dark is magical.</div>
+              <div class="stop-fact">🌿 <em>Fun fact:</em> The entire main hall platform is built without a single nail — using only interlocking wooden joints. The phrase "jumping off the stage at Kiyomizudera" is a Japanese idiom meaning to take a leap of faith.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Steps from Kyoto Station. Arrive ~18:52.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🛒 Nishiki Market · walk-through snacks</div>
+              <div class="halal-desc">Sashimi skewers · matcha mochi · daifuku · takotamago · seafood tempura · all halal-safe. Avoid anything with unknown sauces. Opens 10am, best before noon.</div>
+            </div>
+            <span class="halal-cert">Halal-safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Lunch — Genkaidon Kawaramachi</div>
+              <div class="halal-desc">⭐4.6 · ¥2,000–3,000 · Seafood rice bowl · Kawaramachi area. ⚠️ Verify no pork stock.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏮 Pontocho Alley · evening stroll</div>
+              <div class="halal-desc">Spontaneous snack while walking through. Seafood skewers from stalls generally safe. Great atmosphere.</div>
+            </div>
+            <span class="halal-cert">Casual</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Dinner — Halal Yakiniku Sudaku</div>
+              <div class="halal-desc">⭐4.6 · Certified halal · $$ · Yakiniku. Good energy dinner after a massive walking day.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF0F0">
+          <div class="day-date-n" style="color:var(--kyoto)">23</div>
+          <div class="day-date-m" style="color:var(--kyoto)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Ninna-ji → Golden Pavilion → Philosopher's Path</div>
+          <div class="day-meta">Thursday · Northwest temples then east Kyoto walk</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:#8B3A3A40;color:#8B3A3A">🏨</div>
+              <div class="move-vline" style="background:#8B3A3A30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Via Inn Prime Kyoto → Ninna-ji</div>
+              <div class="move-detail">Walk 6 min to Kyoto Station → Bus 26 from Kyoto Station → Omuro Ninnaji stop · ~35 min · ¥230</div>
+              <span class="move-time" style="background:#FDF0F0;color:#8B3A3A">~40 min total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">1</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ninna-ji <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Imperial villa turned temple with a stunning 5-storey pagoda. Much quieter than the famous temples. The pagoda garden is worth the entry fee.</div>
+              <div class="stop-fact">🌸 <em>Fun fact:</em> Ninna-ji has its own variety of late-blooming cherry tree called Omuro cherry. They're shorter than usual so the blossoms hang at eye level — flowers you can look directly into.
+              <div class="food-inline">🥞 <span><strong>Breakfast first — Panel Cafe</strong> opens 10AM in Gion. Soufflé pancakes. <strong>Book ahead on TableCheck.</strong> Then head northwest. ⚠️ Egg/dairy only.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 15 min east through the temple quarter</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">15 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">2</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ryōan-ji · Rock Garden <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Japan's most famous rock garden — 15 stones arranged so you can never see all at once. Sit on the wooden platform and stare at it for 10 minutes. That's the whole point.</div>
+              <div class="stop-fact">🪨 <em>Fun fact:</em> Nobody knows who designed the garden or what it means. Theories include islands in the ocean, a tiger carrying cubs, and a Zen mind puzzle. The mystery is deliberate.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 18 min east</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">18 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">3</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kinkaku-ji · The Golden Pavilion <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Gold-leaf pavilion reflected in the mirror pond. It's genuinely magnificent — but very busy. Accept the crowd, take the photo, spend 30 minutes circling the pond. Early arrival has shorter queues.</div>
+              <div class="stop-fact">✨ <em>Fun fact:</em> The pavilion is covered in actual gold leaf — applied fresh after a fire in 1950. A monk burned it down. His story inspired a famous novel by Mishima Yukio, simply titled "The Temple of the Golden Pavilion."</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚌</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">City Bus 204</div>
+              <div class="move-detail">Kinkakuji-michi stop → Ginkakuji-michi stop · ~30 min · ¥260</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">~30 min bus</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">4</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ginkaku-ji + start Philosopher's Path <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">The "Silver" Pavilion is actually unpainted wood — but the moss garden and sand cone are stunning. This is the northern start of the Philosopher's Path.
+              <div class="food-inline">🍜 <span><strong>~13:00 — Lunch near here.</strong> <strong>Halal Ramen Wagyuza Kyoto</strong> (new Navito Halal spot) is nearby in central Kyoto. Or grab a snack from street stalls on Philosopher's Path — tofu, mochi, matcha sweets are generally safe.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Philosopher's Path — 2km canal walk south</div>
+              <div class="move-detail">Flat walking path along a canal lined with cherry trees. The walk IS the activity — stops along the way to cafes and small temples. Ends at Nanzen-ji.</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">30–40 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">5</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Nanzen-ji <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Massive wooden sanmon gate (walk up inside for views) and an unexpected Roman-style brick aqueduct running through the temple grounds. Very photogenic.</div>
+              <div class="stop-fact">🏛️ <em>Fun fact:</em> The aqueduct was built in 1890 to carry Lake Biwa water to Kyoto, and was deliberately designed to look Roman to impress Western visitors during the Meiji era.
+              <div class="food-inline">🍔 <span><strong>Dinner tonight — Wagyu Burger by PANGA.</strong> ⭐4.9 · Panga brand · likely halal. Casual end to the day.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Bus or taxi from Nanzen-ji → Kyoto Station. ~25 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥞 Breakfast — Panel Cafe</div>
+              <div class="halal-desc">Opens 10AM · Soufflé pancakes · Gion/Higashiyama · Book ahead on TableCheck (weekday reservations only). ⚠️ Not halal certified — egg/dairy only.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍜 Lunch — Halal Ramen Wagyuza Kyoto</div>
+              <div class="halal-desc">New restaurant by Navito Halal · near Philosopher's Path area · great option after morning temples. Or grab snacks from street stalls on the path — tofu, mochi, matcha sweets are generally safe.</div>
+            </div>
+            <span class="halal-cert">Halal</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍔 Dinner — The Wagyu Burger by PANGA</div>
+              <div class="halal-desc">⭐4.9 · Panga brand · likely halal. Casual burger dinner after northwest Kyoto day.</div>
+            </div>
+            <span class="halal-cert">Likely halal</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 8 condensed -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF0F0">
+          <div class="day-date-n" style="color:var(--kyoto)">24</div>
+          <div class="day-date-m" style="color:var(--kyoto)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Arashiyama + Nijo Castle + Higashiyama</div>
+          <div class="day-meta">Friday · Bamboo forest early · Castle · Evening district</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:#8B3A3A40;color:#8B3A3A">🏨</div>
+              <div class="move-vline" style="background:#8B3A3A30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Via Inn Prime Kyoto → Arashiyama Bamboo Forest</div>
+              <div class="move-detail">Walk 6 min to Kyoto Station → JR San-In Line → Saga-Arashiyama Station · 15 min · ¥240 · Walk 10 min to grove</div>
+              <span class="move-time" style="background:#FDF0F0;color:#8B3A3A">~30 min total · ¥240</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">1</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Arashiyama Bamboo Forest <span class="stop-dur">30–45 min</span></div>
+              <div class="stop-desc"><strong>Go before 8am.</strong> The ~200m grove is magical empty and chaotic by 10am. The rustling bamboo in the early morning is genuinely special. JR San-In Line from Kyoto Station to Saga-Arashiyama (15 min, ¥240).</div>
+              <div class="stop-fact">🎍 <em>Fun fact:</em> Bamboo can grow up to 90cm per day. The rustling sound you hear isn't wind alone — it's the giant stalks creaking against each other, which is why the grove is designated one of Japan's 100 Soundscapes worth preserving.
+              <div class="food-inline">🍣 <span><strong>Lunch on the way back — Tendon Makino Teramachi.</strong> ⭐4.2 · tempura tendon · central Kyoto. ⚠️ Verify sauce.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚶</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min to Tenryuji (adjacent)</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">5 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">2</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Tenryū-ji Temple <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">UNESCO Zen temple — the pond garden with Arashiyama hills as the backdrop is one of Japan's finest landscapes. Designed to be "borrowed scenery" using the mountains as part of the composition.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚃</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">JR San-In Line → Tozai Subway to Nijo</div>
+              <div class="move-detail">Saga-Arashiyama → Nijo Station (transfer to Tozai Line) · ~20 min total</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">~20 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">3</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Nijo Castle <span class="stop-dur">1.5 hrs</span></div>
+              <div class="stop-desc">Shogun's fortress with famous "nightingale floors" — they creak to detect intruders. The painted screens inside are among Japan's finest. Allow time for the large garden too.</div>
+              <div class="stop-fact">🎶 <em>Fun fact:</em> The "nightingale floors" creak by design, not accident — tiny metal clamps under the floorboards rub against nails with every step, making sneaking up on the shogun impossible.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#FDF0F0;border-color:var(--kyoto-m);color:var(--kyoto)">🚌</div>
+              <div class="move-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Bus 51 east to Higashiyama</div>
+              <div class="move-detail">Nijo Castle bus stop → Higashiyama stop · ~25 min · ¥260</div>
+              <span class="move-time" style="background:#FDF0F0;color:var(--kyoto)">~25 min bus</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">4</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Higashiyama District at dusk <span class="stop-dur">1.5 hrs</span></div>
+              <div class="stop-desc">Preserved historic quarter with traditional machiya townhouses, lanterns, and craft shops. Wander the lanes of Nene-no-Michi and Ishibei Koji. Evening light here is exceptional.
+              <div class="food-inline">🥪 <span><strong>Ohanabatake Gion branch</strong> for a halal wagyu sandwich on the walk through Higashiyama — then head to Panga for dinner.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Bus 206 or taxi from Higashiyama → Kyoto Station area. ~20 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Lunch — Tendon Makino Teramachi</div>
+              <div class="halal-desc">⭐4.2 · ¥2,000–3,000 · Tempura tendon · central Kyoto on way back from Arashiyama. ⚠️ Verify sauce.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥪 Afternoon snack — Ohanabatake Gion branch</div>
+              <div class="halal-desc">Halal wagyu toasted sandwich · on the walk through Higashiyama/Gion · between sightseeing and dinner.</div>
+            </div>
+            <span class="halal-cert">Halal</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Dinner — Wagyu Sukiyaki Kyoto Panga</div>
+              <div class="halal-desc">⭐4.9 · Certified halal · A5 wagyu sukiyaki · ¥10,000+ · THE Kyoto special dinner. Prayer space on site. <strong>Book ahead — opens 5PM.</strong></div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 9 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#FDF0F0">
+          <div class="day-date-n" style="color:var(--kyoto)">25</div>
+          <div class="day-date-m" style="color:var(--kyoto)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Hanaikada Lunch + Private Onsen</div>
+          <div class="day-meta">Saturday · Arashiyama · Rest before Tokyo</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ Booked — Hanaikada · Lunch 11:00–13:00 · Private Onsen 13:00–13:40</div>
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">1</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hotel → Hanaikada · Arashiyama</div>
+              <div class="stop-desc">JR San-In Line from Kyoto Station → Saga-Arashiyama (15 min, ¥240), then walk 15 min to Hanaikada. Leave hotel by 10:15am for a relaxed arrival.</div>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">2</div>
+              <div class="stop-vline" style="background:var(--kyoto-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Hanaikada · Lunch <span class="stop-dur">11:00–13:00</span> <span class="tag-booked">BOOKED</span></div>
+              <div class="stop-desc">Traditional kaiseki lunch in a riverside Arashiyama setting. Confirm halal requirements with the restaurant ahead of arrival — contact them to clarify specific dishes.</div>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--kyoto)">3</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Private Onsen <span class="stop-dur">13:00–13:40</span> <span class="tag-booked">BOOKED</span></div>
+              <div class="stop-desc">40 minutes in a private hot spring bath. Completely private. Deeply relaxing before the big Tokyo week.</div>
+              <div class="stop-fact">♨️ <em>Fun fact:</em> Japan has over 27,000 hot spring resorts (onsen). The water chemistry varies by region — some turn your skin silky, some smell of sulfur, some are actually mildly radioactive. This private bath is a gentle mineral spring.
+              <div class="food-inline">🍽️ <span><strong>Dinner tonight — Honolu Grande Kyoto.</strong> ⭐4.7 · certified halal · takoyaki + okonomiyaki · relaxed post-onsen. No reservation needed.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="note-strip">🗓 Pack tonight. Pack light — you don't want to drag heavy bags around Tokyo. Leave time to rest this evening. Big week ahead.</div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">JR San-In Line from Saga-Arashiyama → Kyoto Station. 15 min. Last night in Kyoto. 🏪 <strong>Tomorrow morning:</strong> grab konbini breakfast at 7-Eleven before heading to Kyoto Station — no time for sit-down.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">✅ Lunch — Hanaikada · Arashiyama</div>
+              <div class="halal-desc">Already booked · 11:00–13:00 · Traditional Japanese riverside restaurant. Private onsen follows 13:00–13:40.</div>
+            </div>
+            <span class="halal-cert">Booked</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍽️ Dinner — Honolu Grande Kyoto</div>
+              <div class="halal-desc">⭐4.7 · Certified halal · ¥2,000–3,000 · Halal takoyaki + okonomiyaki. Relaxed post-onsen evening. No reservation needed.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TOKYO ══════════════ -->
+  <section class="city-section" id="tokyo">
+    <div class="city-banner">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#0A1A3D 0%,#1A3568 40%,#2B5599 100%)"></div>
+      <div class="city-banner-overlay"></div>
+      <div class="city-banner-text">
+        <div class="city-eyebrow">Days 10–16 · 26 Apr – 2 May</div>
+        <div class="city-name">Tokyo</div>
+        <div class="city-sub">Sotetsu Fresa Inn Kanda · 6 nights · Golden Week</div>
+        <span class="city-tag">Arrive 12:24</span>
+        <span class="city-tag">TeamLab booked</span>
+        <span class="city-tag">HP Studios booked</span>
+        <span class="city-tag">Go Kart booked</span>
+      </div>
+    </div>
+
+    <!-- Day 10 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">26</div>
+          <div class="day-date-m" style="color:var(--tokyo)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Arrive → Akihabara → Shinjuku</div>
+          <div class="day-meta">Sunday · Nozomi 88 departs Kyoto 10:13 · Arrives Tokyo 12:24</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="note-strip">⏱ Hotel check-in is 3pm. Drop your bags at the front desk and head straight to Akihabara — it's a 10 min walk from Kanda station.</div>
+                <div class="booking-strip ok">✓ Booked — Nozomi 88 · 26 Apr · Kyoto 10:13 → Tokyo 12:24 · Car 4 Seats 1-A &amp; 1-B · Reservation No. 49563</div>
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🚄</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Nozomi 88 Shinkansen — Kyoto → Tokyo</div>
+              <div class="move-detail">Kyoto Station → Tokyo Station · Car 4 · Seats 1-A & 1-B · Reservation No. 49563 · Regular ticket · Non-smoking · Oversized Baggage area car</div>
+              <div class="food-inline">👓 <span><strong>Plan ahead — get glasses in Akihabara today!</strong> <strong>JINS</strong> (from ¥6,600), <strong>Zoff</strong> (from ¥5,500), or <strong>OWNDAYS</strong> (from ¥7,000 · zero extra charge for thin lenses) all have branches a short walk from Akihabara Station. Free eye exam · 20–30 min turnaround for standard lenses. ⚠️ Want blue light or tinted lenses? Order today — special lenses take ~1 week and don't ship internationally.</span></div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">10:13 → 12:24 · 2h 11min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Tokyo Station → Hotel <span class="stop-dur">~30 min</span></div>
+              <div class="stop-desc">Exit Tokyo Station and take the Yamanote Line or Chuo-Sobu Line to Kanda Station — 2 stops, ~5 min, ¥170/person. Sotetsu Fresa Inn Kanda is a 3 min walk from Kanda Station. Drop bags, freshen up — then head straight to Akihabara, it's a 10 min walk east.</div>
+              <div class="stop-fact">🗼 <em>Fun fact:</em> Tokyo Station's iconic red-brick Marunouchi building was built in 1914 and is a National Important Cultural Property. The dome ceilings inside are decorated with the 12 signs of the zodiac.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🏨</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sotetsu Fresa Inn Kanda → Akihabara</div>
+              <div class="move-detail">10 min walk east from hotel — Akihabara is the next neighbourhood over. No transport needed.</div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">10 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Akihabara — GiGO + Super Potato + Taito Station <span class="stop-dur">2.5 hrs</span></div>
+              <div class="stop-desc">Walk from the hotel (~10 min). GiGO Akihabara 3 is the main arcade — multiple floors of UFO catchers, rhythm games, and crane machines. Super Potato next door is the legendary retro game shop. Taito Station for classic arcade games. Yodobashi-Akiba for electronics.</div>
+              <div class="stop-fact">🕹️ <em>Fun fact:</em> Akihabara ("Electric Town") became the world's first electronics district after WWII when black-market radio parts dealers all clustered here. Today it's the global centre of anime and manga culture.
+              <div class="food-inline">🍣 <span><strong>Lunch — Fujiyama Akihabara.</strong> Halal-friendly all-you-can-eat sushi + crab. 30 sec from Akihabara Showa Street Exit. Book ahead.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">JR Chuo-Sobu Line direct to Shinjuku</div>
+              <div class="move-detail">Akihabara Station → Shinjuku Station · 4 stops direct · ~15 min · ¥200</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">~15 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Don Quijote <span class="stop-dur">30–45 min</span></div>
+              <div class="stop-desc">Everything-store in organised chaos. Multi-floor maze of snacks, cosmetics, electronics, toys, and weird Japanese novelties. Great for unique Kit-Kat flavours and souvenirs.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 8 min northeast to Golden Gai</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">8 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">4</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Golden Gai + Kabukicho <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Six tiny alleyways with ~200 micro-bars each seating 5–8 people. Walk through for the atmosphere even if not drinking. Extraordinary at night. Kabukicho entertainment district is adjacent.</div>
+              <div class="stop-fact">🍺 <em>Fun fact:</em> Golden Gai survived multiple plans to demolish it since the 1980s. The bars owners physically slept in their establishments to prevent eviction. It's now protected and celebrated.
+              <div class="food-inline">👓 <span><strong>JINS Shinjuku</strong> is in the Odakyu Ace mall at Shinjuku Station South Exit — good backup glasses stop if you didn't go in Akihabara.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 12 min to Omoide Yokocho</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">12 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">5</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Omoide Yokocho · Memory Lane <span class="stop-dur">20 min</span></div>
+              <div class="stop-desc">Narrow alley under the train tracks with tiny smoky yakitori stalls. Atmospheric and photogenic even if you're just walking through. One of Tokyo's most evocative spots.
+              <div class="food-inline">🍜 <span><strong>Dinner after this — Halal Wagyu Ramen Shinjuku-Tei.</strong> ⭐4.9 · certified halal · right in Shinjuku.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2B4B8B">Sotetsu Fresa Inn Tokyo Kanda</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Walk back to hotel from Omoide Yokocho. ~25 min or one JR stop.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Lunch — Fujiyama Akihabara</div>
+              <div class="halal-desc">Halal-friendly · all-you-can-eat sushi + crab + wagyu · Halal Sushi Course ¥6,598 · ~90 varieties · 30 sec from Akihabara Showa Street Exit. <strong>Book ahead.</strong></div>
+            </div>
+            <span class="halal-cert">Halal-friendly</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍜 Dinner — Halal Wagyu Ramen Shinjuku-Tei</div>
+              <div class="halal-desc">⭐4.9 · Certified halal · right in Shinjuku area. Easy dinner after Golden Gai and Omoide Yokocho.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 11 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">27</div>
+          <div class="day-date-m" style="color:var(--tokyo)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">TeamLab Planets + Odaiba + Roppongi</div>
+          <div class="day-meta">Monday · Entry 11:00 · Art → robots → seaside</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ TeamLab Planets booked · 27 Apr · Entry 11:00 · Be there by 10:50</div>
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🏨</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sotetsu Fresa Inn Kanda → TeamLab Planets</div>
+              <div class="move-detail">Kanda Station → Tsukishima (Tokyo Metro Hibiya Line, 4 stops, ~12 min) → walk 10 min to TeamLab</div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">~25 min · ¥200</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">TeamLab Planets Tokyo <span class="stop-dur">1.5–2 hrs</span> <span class="tag-booked">BOOKED · 11:00</span></div>
+              <div class="stop-desc">Immersive digital art — walk through water rooms (you'll get wet up to the knee), floating flowers, infinity mirrors. Remove shoes at entry, lockers provided. Don't rush each room.</div>
+              <div class="stop-fact">🌊 <em>Fun fact:</em> TeamLab employs over 1,000 people — engineers, programmers, mathematicians, and artists — and has no traditional art trained employees. Every piece is entirely digital and algorithmic.
+              <div class="food-inline">🥩 <span><strong>Lunch after TeamLab — Halal Wagyu Yakiniku Panga.</strong> ⭐4.8 · certified halal · central Tokyo · on route to Odaiba.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚝</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Yurikamome Line monorail to Odaiba</div>
+              <div class="move-detail">Walk to Shijo-mae Station (10 min) → take the Yurikamome elevated monorail → Daiba Station · 4 stops · ~12 min. Scenic ride over Tokyo Bay.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">~25 min total</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Gundam Statue + DiverCity + Joypolis <span class="stop-dur">2 hrs</span></div>
+              <div class="stop-desc">Life-size Unicorn Gundam outside DiverCity mall. Doraemon Future Department Store inside on floor 2. Joypolis is Sega's indoor theme park in the same building — VR rides and interactive attractions. One entry covers most.</div>
+              <div class="stop-fact">🤖 <em>Fun fact:</em> The Gundam statue is 19.7 metres tall — exactly 1/1 scale. The "real" Gundam in the anime would be 18m tall. The statue is 10cm taller than the fictional robot because the head would have disappeared into the building ceiling.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 10 min to the waterfront</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">10 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Odaiba Seaside + Rainbow Bridge <span class="stop-dur">45 min · aim for sunset</span></div>
+              <div class="stop-desc">Rainbow Bridge and the Tokyo skyline reflected in the bay. Free beachfront walk. Aim for sunset — the view of the city lighting up across the water is one of Tokyo's best free moments.
+              <div class="food-inline">🐟 <span><strong>Dinner tonight — Maguro Mart.</strong> ⭐4.5 · tuna izakaya · Roppongi accessible · pure seafood · casual.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="note-strip">🌃 Roppongi option: if you have energy, take the Yurikamome → Shiodome, then Oedo Line to Roppongi (~25 min). Roppongi Hills and the Mori Tower observation deck are worth it for night views. Otherwise skip — you have a packed week ahead.</div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Bus or taxi from Nanzen-ji → Kyoto Station. ~25 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Lunch — Halal Wagyu Yakiniku Panga</div>
+              <div class="halal-desc">⭐4.8 · Certified halal · yakiniku · central Tokyo · between Odaiba and Roppongi.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🐟 Dinner — Maguro Mart</div>
+              <div class="halal-desc">⭐4.5 · Tuna izakaya · pure seafood · Roppongi accessible · casual and fun. No halal concern.</div>
+            </div>
+            <span class="halal-cert">Seafood</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 12 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">28</div>
+          <div class="day-date-m" style="color:var(--tokyo)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Asakusa + Tokyo Skytree + Harry Potter Studios</div>
+          <div class="day-meta">Tuesday · Morning temples · Entry 15:00</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ Warner Bros. Studio Tour Tokyo booked · 28 Apr · Entry 15:00 · €36/person</div>
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🏨</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sotetsu Fresa Inn Kanda → Asakusa</div>
+              <div class="move-detail">Kanda → Ueno (JR Yamanote Line, 1 stop, 3 min) → Asakusa (Tokyo Metro Ginza Line, 3 stops, 6 min) · Walk 5 min to Kaminarimon Gate</div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">~20 min · ¥220</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kaminarimon Gate + Sensoji Temple + Nakamise Street <span class="stop-dur">1.5 hrs</span></div>
+              <div class="stop-desc">Tokyo's oldest temple. Giant paper lantern at Kaminarimon gate is iconic. Walk through Nakamise shopping street to the temple main hall. Try ningyo-yaki (red bean cakes) from street stalls.</div>
+              <div class="stop-fact">⛩️ <em>Fun fact:</em> Sensoji Temple receives 30 million visitors a year — making it the most visited spiritual site in the world. It's actually a Buddhist temple, not a Shinto shrine, which surprises many visitors.</div>
+              <div class="stop-fact">↳ <em>Metro:</em> Kanda → Ueno (JR, 1 stop) → Asakusa (Ginza Line, 3 stops) · ~20 min
+              <div class="food-inline">🥩 <span><strong>Lunch in Asakusa — Kawashina Asakusa Wagyu.</strong> ⭐5.0 · certified halal · the wagyu highlight of Tokyo.</span></div>
+              <div class="food-inline">🍜 <span><strong>Dinner on the way back — Halal Ramen Honolu Premier Asakusa.</strong> ⭐4.8 · certified halal · ¥1,000–2,000.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 15 min east, or 1 stop on Tobu Skytree Line</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">15 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Tokyo Skytree base + Solamachi mall <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">No need to pay to go up (expensive, long queues). The Solamachi shopping mall at the base has great food, design shops, and views of the tower from below. Get lunch here.</div>
+              <div class="stop-fact">📡 <em>Fun fact:</em> Tokyo Skytree is 634m tall — chosen because 6-3-4 in Japanese can be read as "mu-sa-shi," the name of the old province where Tokyo stands.
+              <div class="food-inline">🍦 <span><strong>Snack — Crepes & Espresso</strong> in the Asakusa area. Sweet treat between Sensoji and Skytree.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Tobu Skytree Line → Oedo Line → Walk</div>
+              <div class="move-detail">Oshiage → transfer → Toshimaen area · ~50 min total. Leave by 13:30 to arrive at HP Studios by 14:50.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">~50 min · leave by 13:30</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Harry Potter Studios <span class="stop-dur">3–4 hrs</span> <span class="tag-booked">BOOKED · 15:00</span></div>
+              <div class="stop-desc">Great Hall, Diagon Alley, original props and costumes. Butterbeer is non-alcoholic. Don't rush the Hogwarts scale model at the end. Allow 3–4 hours minimum.</div>
+              <div class="stop-fact">⚡ <em>Fun fact:</em> The Tokyo studio is the largest Harry Potter attraction in the world — bigger than the original in London. It was built on the site of the former Toshimaen amusement park, which closed in 2020 after 94 years.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2B4B8B">Sotetsu Fresa Inn Tokyo Kanda</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Reverse direction back to Kanda from HP Studios. ~50 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Lunch — Kawashina Asakusa Wagyu</div>
+              <div class="halal-desc">⭐5.0 · Certified halal · right in Asakusa · the wagyu highlight of Tokyo.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍦 Snack — Crepes & Espresso</div>
+              <div class="halal-desc">⭐4.1 · Asakusa area · sweet snack between Sensoji and Skytree. No halal concern — pure dairy/egg.</div>
+            </div>
+            <span class="halal-cert">Safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍜 Dinner — Halal Ramen Honolu Premier Asakusa</div>
+              <div class="halal-desc">⭐4.8 · Certified halal · ¥1,000–2,000 · Asakusa · on the way back from Harry Potter Studios. Easy end to a long day.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 13 - Mount Fuji -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">29</div>
+          <div class="day-date-m" style="color:var(--tokyo)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Mount Fuji day trip</div>
+          <div class="day-meta">Wednesday (Showa Day) · Liner 08:40 · Chureito Pagoda · Return 18:00</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ Tokyo Fuji Five Lakes Liner booked · Depart Tokyo Station 08:40 · ¥4,600 for 2 · Arrive Kawaguchiko 10:42</div>
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Leave hotel at 08:00</div>
+              <div class="stop-desc">Walk or take one metro stop to Tokyo Station Yaesu South Exit. Bus departs at 08:40 — aim to be at the stop by 08:25.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚌</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Tokyo Fuji Five Lakes Liner</div>
+              <div class="move-detail">Tokyo Station Yaesu South Exit → Kawaguchiko Station Bus Stop No.2 · No transfers · ¥4,600 for 2</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">Depart 08:40 · Arrive 10:42</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Chureito Pagoda <span class="stop-dur">1–1.5 hrs</span></div>
+              <div class="stop-desc">Take the Fujikyuko Line one stop from Kawaguchiko to Fujisan Station (~¥200, 2 min), then walk 15 min and climb 398 steps. The iconic view of Fuji framed behind the five-storey pagoda. Go early before crowds peak.</div>
+              <div class="stop-fact">📸 <em>Fun fact:</em> This is one of the most photographed spots in all of Japan — the pagoda with Fuji behind it appears on countless postcards. It was built in 1963 as a war memorial. The climb is worth every step.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Fujikyuko Line back to Kawaguchiko</div>
+              <div class="move-detail">Fujisan Station → Kawaguchiko Station · 1 stop · 3 min</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">3 min · ~¥200</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Lunch at Houtou Fudou <span class="stop-dur">~12:30 · 1 hr</span></div>
+              <div class="stop-desc">Kawaguchiko's most famous restaurant serving hoto noodles — thick flat noodles in miso broth with vegetables and pumpkin. The local specialty. The building is designed to look like a samurai fortress.</div>
+              <div class="stop-fact">🍜 <em>Fun fact:</em> Hoto noodles are a Yamanashi prefecture dish said to have been eaten by samurai warlord Takeda Shingen to sustain his troops. The wide flat noodles absorb the rich miso broth beautifully in the cold mountain air.
+              <div class="food-inline">🏔️ <span><strong>Houtou Fudou</strong> — thick flat miso udon, Yamanashi specialty. Famous restaurant right near the lake. A must.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚌</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Retro Bus day pass — lakeshore loop</div>
+              <div class="move-detail">Buy the Retro Bus day pass (~¥1,500) at Kawaguchiko Station. Covers the full lake circuit. First stop: Achi no Hana / North Shore for the best Fuji reflection over the lake. Then Oishi Park for the wide open panorama.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">Day pass ¥1,500</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">4</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Achi no Hana + Oishi Park <span class="stop-dur">2 hrs</span></div>
+              <div class="stop-desc">North shore: best Fuji reflection in the lake water. Oishi Park: wide open panoramic view with wildflowers in the foreground. Late afternoon light on Fuji is exceptional.</div>
+              <div class="stop-fact">🗻 <em>Fun fact:</em> Mount Fuji is technically an active volcano that last erupted in 1707. That eruption blanketed Edo (now Tokyo) in ash for weeks. It's been quiet since — but geologists say it's statistically overdue.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚌</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Tokyo Fuji Five Lakes Liner — return</div>
+              <div class="move-detail">Kawaguchiko Station Bus Stop No.2 → Tokyo Station Nihonbashi Exit · No transfers</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">Depart 18:00 · Arrive Tokyo 20:05</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">5</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Back in Tokyo · Dinner near Kanda <span class="stop-dur">Arrive 20:05</span></div>
+              <div class="stop-desc">Hotel is walkable from Tokyo Station Nihonbashi Exit. Grab dinner in the Kanda area on the way back — plenty of halal ramen and restaurants nearby.
+              <div class="food-inline">🍜 <span><strong>Dinner — Halal Wagyu Ramen Shinjuku-Tei Ginza.</strong> ⭐4.9 · certified halal · well-deserved after a big day at Fuji.</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#FDF0F0;border:1px solid #8B3A3A30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#8B3A3A;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#8B3A3A">Via Inn Prime Kyoto Hachijo Exit</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">JR San-In Line back from Saga-Arashiyama → Kyoto. 15 min. Pack tonight.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🏔️ Lunch — Houtou Fudou · Lake Kawaguchiko</div>
+              <div class="halal-desc">Famous local restaurant near Mt Fuji · thick flat udon noodles in miso soup with vegetables (houtou). A Yamanashi specialty — a must near Fuji.</div>
+            </div>
+            <span class="halal-cert">Safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍜 Dinner — Halal Wagyu Ramen Shinjuku-Tei Ginza</div>
+              <div class="halal-desc">⭐4.9 · Certified halal · Ginza · easy dinner back in Tokyo after a long Fuji day. You've earned it.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 14 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">30</div>
+          <div class="day-date-m" style="color:var(--tokyo)">Apr</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Tsukiji + Ginza + Ameyoko + Nakano Broadway</div>
+          <div class="day-meta">Thursday · Tsukiji market early · Ginza · Ameyoko · Nakano</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🏨</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sotetsu Fresa Inn Kanda → Tsukiji</div>
+              <div class="move-detail">Kanda → Tsukiji (Tokyo Metro Hibiya Line, 5 stops, ~10 min) · Walk 5 min to outer market entrance</div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">~15 min · ¥180</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Tsukiji Outer Market <span class="stop-dur">1–1.5 hrs · go before 10am</span></div>
+              <div class="stop-desc">The famous inner wholesale market moved to Toyosu in 2018, but the outer market remains — a packed stretch of seafood stalls, tamagoyaki vendors, knife shops, and street food. Go early for the freshest stalls. Most food here is naturally halal-safe (fresh seafood, grilled scallops, egg). Avoid anything with pork-based sauces or mystery marinades.</div>
+              <div class="stop-fact">🐟 <em>Fun fact:</em> Tsukiji handled over 480 tonnes of seafood per day at its peak — more than any other fish market in the world. The outer market has existed since the 1930s and some stall families are now in their fourth generation.</div>
+              <div class="stop-fact">↳ <em>Metro:</em> Kanda → Tsukijishijo (Oedo Line, change at Shin-Kiba or Shiodome) · or Kanda → Tsukiji (Hibiya Line, 5 stops) · ~15 min · Walk 5 min from Tsukiji Station
+              <div class="food-inline">🐟 <span><strong>Go early — best before 10AM.</strong> Sashimi · oysters · tamagoyaki · seafood skewers · all halal-safe. Eat as you walk.</span></div>
+              <div class="food-inline">🍣 <span><strong>Dinner tonight — Sushi Yurakucho Kakida.</strong> ⭐4.6 · ¥14,000 · unlimited omakase · 19F Odakyu Hotel Shinjuku. THE special Tokyo dinner. <strong>Book ahead.</strong></span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 15 min northwest to Ginza</div>
+              <div class="move-detail">Tsukiji to Ginza is a pleasant flat walk through the back streets — no transport needed.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">15 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ginza — Uniqlo + MUJI Flagships <span class="stop-dur">2 hrs</span></div>
+              <div class="stop-desc">Uniqlo Ginza is 12 floors — the largest in Japan with Japan-exclusive collections. MUJI Ginza flagship is two blocks away. Walk the side streets between them.</div>
+              <div class="stop-fact">🛍️ <em>Fun fact:</em> Ginza's land is the most expensive real estate in Japan — one square metre can cost over ¥30 million (roughly €180,000). Uniqlo's Ginza building alone sits on land worth more than many entire shopping districts elsewhere.
+              <div class="food-inline">🍛 <span><strong>Lunch — Tendon Itsuki Ginza.</strong> ⭐4.3 · certified halal · ¥1,000–2,000 · tempura tendon · 3 min from Yurakucho Station. Then snack at <strong>Pudding Lab</strong> — pudding soft serve, right in Ginza. ⚠️ Avoid gelatin toppings.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Hibiya Line direct to Ueno</div>
+              <div class="move-detail">Ginza Station → Ueno Station (Hibiya Line) · 3 stops · ~8 min. Ameyoko is directly outside Ueno Station exits 5/6.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">8 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ameyoko Market · Ueno <span class="stop-dur">1–1.5 hrs</span></div>
+              <div class="stop-desc">Open-air market under the JR train tracks — street food, dried goods, clothing bargains. Try taiyaki (fish-shaped waffle with red bean) and fresh fish stalls. Best around lunchtime.</div>
+              <div class="stop-fact">🐟 <em>Fun fact:</em> Ameyoko means "Candy Alley" — it started as a black market after WWII where sweet potatoes were secretly sold as candy to avoid tax rules. It's been a market ever since.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">JR Chuo-Sobu Line direct to Nakano</div>
+              <div class="move-detail">Ueno Station → Nakano Station · 7 stops · ~25 min · Nakano Broadway is a 5 min walk north of the station through the Sun Mall arcade</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">~25 min</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">4</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Nakano Broadway <span class="stop-dur">1.5–2 hrs</span></div>
+              <div class="stop-desc">Less touristy than Akihabara. Multiple Mandarake stores across the floors — vintage manga, rare figures, first-edition cards, doujinshi. Real collector territory. Have dinner in Nakano after.</div>
+              <div class="stop-fact">🎌 <em>Fun fact:</em> Mandarake started in Nakano in 1980 as a single tiny booth selling used manga. It now has 25 stores across Japan and processes millions of items — it's essentially the world's largest used anime goods operation.</div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#EEF2FD;border:1px solid #2B4B8B30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#2B4B8B;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2B4B8B">Sotetsu Fresa Inn Tokyo Kanda</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">JR Chuo-Sobu Line from Shinjuku → Kanda. ~12 min. Or Yamanote to Kanda.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🐟 Morning — Tsukiji Outer Market</div>
+              <div class="halal-desc">Sashimi skewers · fresh oysters · tamagoyaki · seafood skewers · all halal-safe. Go early (opens ~5AM, best before 10AM before it gets crowded). Eat as you walk.</div>
+            </div>
+            <span class="halal-cert">Halal-safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍛 Lunch — Tendon Itsuki Ginza</div>
+              <div class="halal-desc">⭐4.3 · Certified halal · ¥1,000–2,000 · tempura tendon with halal chicken and seafood · right in Ginza · 3 min from Yurakucho Station.</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍮 Snack — Pudding Lab Ginza</div>
+              <div class="halal-desc">Pudding soft serve with 2 sauces · creative and fun · right in Ginza. ⚠️ Stick to plain pudding soft serve — avoid gelatin-based toppings.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍣 Dinner — Sushi Yurakucho Kakida</div>
+              <div class="halal-desc">⭐4.6 · ¥14,000 · THE Tokyo special dinner · unlimited omakase sushi · 19F Odakyu Hotel Century Southern Tower Shinjuku · <strong>Book ahead.</strong> ⚠️ Contact restaurant re mirin in rice seasoning before visit.</div>
+            </div>
+            <span class="halal-cert">Special</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 15 - Best day -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">1</div>
+          <div class="day-date-m" style="color:var(--tokyo)">May</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Harajuku + Shibuya + Sky + Go Kart at night</div>
+          <div class="day-meta">Friday · The best day. Kart at 19:45.</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="booking-strip ok">✓ Street Kart Shibuya booked · 1 May · 19:45 · Bring physical IDP booklet (Geneva 1949 only)</div>
+        <div class="booking-strip go">! Shibuya Sky — book now at shibuya-sky.jp/en · Sunset slots sell out weeks ahead during Golden Week</div>
+        <div class="stop-flow">
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:#2B4B8B40;color:#2B4B8B">🏨</div>
+              <div class="move-vline" style="background:#2B4B8B30"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Sotetsu Fresa Inn Kanda → Harajuku</div>
+              <div class="move-detail">Kanda → Harajuku (JR Yamanote Line, 6 stops, ~18 min) · Walk 5 min to Meiji Shrine entrance</div>
+              <span class="move-time" style="background:#EEF2FD;color:#2B4B8B">~25 min · ¥200</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Meiji Jingu Shrine <span class="stop-dur">45 min</span></div>
+              <div class="stop-desc">Vast forested shrine in the heart of Tokyo. Enter through the massive torii gate and walk the gravel forest path. Calm and impressive — a sharp contrast to the Harajuku crowds next door.</div>
+              <div class="stop-fact">🌳 <em>Fun fact:</em> The 70-hectare forest surrounding Meiji Shrine was planted entirely by volunteers in 1920. Over 100,000 trees from across Japan were donated and planted — none were there before.</div>
+              <div class="stop-fact">↳ <em>JR Yamanote Line:</em> Kanda → Harajuku Station · 6 stops · ~18 min
+              <div class="food-inline">👟 <span><strong>On the walk out toward Takeshita Dori — Onitsuka Tiger Omotesando flagship.</strong> 2 min from Meiji-jingumae Station · 6-3-9 Jingumae · opens 11:00. The brand's global Yellow Concept Store — full lineup including Mexico 66, apparel, and Japan exclusives.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min through the park gate to Takeshita Dori</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">5 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Takeshita Dori + Flippers pancakes <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">Tokyo's most eccentric 350m street — pastel fashion, crepe shops, elaborate subcultures. Flippers soufflé pancakes: arrive early (before 11am) or queue. Tall, jiggly, genuinely worth it.
+              <div class="food-inline">🥞 <span><strong>Flippers pancakes right here on Takeshita Dori.</strong> Fluffy soufflé pancakes · no halal concern. Also look out for <strong>400°C Pizza Tokyo</strong> nearby for lunch. ⚠️ Verify halal.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 10 min south through Omotesando avenue</div>
+              <div class="move-detail">The avenue itself is beautiful — tree-lined, wide, designer boutiques. Kurono Tokyo is a short walk into the side streets.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">10 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">3</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Kurono Tokyo · watch boutique <span class="stop-dur">30 min</span></div>
+              <div class="stop-desc">Independent Japanese watchmaker. Beautifully designed, deeply Japanese aesthetic. Even just browsing is worth it.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Ginza Line 1 stop to Shibuya</div>
+              <div class="move-detail">Omotesando Station → Shibuya Station · 1 stop · 3 min. Or walk 15 min south through the avenue.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">3 min metro · or 15 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">4</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shibuya Parco + Mega Don Quijote <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">Parco has great design brands, pop-culture floors and a Nintendo store. Mega Don Q next door for final souvenir shopping.
+              <div class="food-inline">🍰 <span><strong>Snack — Dolce Tacubo</strong> in Daikanyama · 5 min walk from Shibuya · financiers + cream puffs + gelato. Perfect afternoon treat.</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 8 min to Shibuya Crossing</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">8 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">5</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shibuya Crossing + Hachiko + Starbucks view <span class="stop-dur">30 min</span></div>
+              <div class="stop-desc">Cross the intersection on foot (all directions simultaneously). Then go to the 2nd floor Starbucks window to watch from above. Hachiko statue is at the station exit — small, bronze, always surrounded by people.</div>
+              <div class="stop-fact">🐕 <em>Fun fact:</em> Hachiko waited at Shibuya Station every day for 9 years after his owner's death in 1925. His loyalty became a national symbol — today the spot he waited is the most popular meeting point in Japan.</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 5 min to Shibuya Sky entrance (Scramble Square tower)</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">5 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">6</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Shibuya Sky · sunset observation deck <span class="stop-dur">1–1.5 hrs</span> <span class="tag-book">BOOK NOW</span></div>
+              <div class="stop-desc">Open-air rooftop on the 46th floor directly above Shibuya Crossing. Views at golden hour are exceptional — the city lights up below you. Book the sunset slot at shibuya-sky.jp/en</div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚶</div>
+              <div class="move-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Walk 15 min to Street Kart Shibuya</div>
+              <div class="move-detail">15 min walk from Shibuya Station. Street Kart base is in the Dogenzaka area. Arrive by 19:35 for your 19:45 booking.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">15 min walk</span>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">7</div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Street Kart Shibuya · go kart at night <span class="stop-dur">1 hr</span> <span class="tag-booked">BOOKED · 19:45</span></div>
+              <div class="stop-desc">Drive through live Tokyo traffic in a go-kart — through Shibuya Crossing, Omotesando, Harajuku. Costumes provided. Bring your physical IDP booklet (Geneva 1949 — not Vienna 1968) and your driving licence. No IDP = no drive, no refund.</div>
+              <div class="stop-fact">🏎️ <em>Fun fact:</em> You drive on the actual public streets of Tokyo at knee height, alongside trucks and taxis. The karts are street-legal miniature vehicles. Some reviewers say it's "the most terrifying thing in a great way" they've ever done.
+              <div class="food-inline">🥩 <span><strong>Dinner before this — GYUMON Jinnan.</strong> ⭐4.8 · certified halal · Shibuya. Don't eat too much — you're racing after! 🏎️</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#EEF2FD;border:1px solid #2B4B8B30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#2B4B8B;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2B4B8B">Sotetsu Fresa Inn Tokyo Kanda</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Yurikamome → Shiodome, then Yamanote/JR to Kanda. ~35 min.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥞 Snack — Flippers pancakes · Harajuku</div>
+              <div class="halal-desc">Already in your stop plan · Takeshita Dori · fluffy soufflé pancakes · no halal concern.</div>
+            </div>
+            <span class="halal-cert">Safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍕 Lunch — 400°C Pizza Tokyo</div>
+              <div class="halal-desc">⭐4.2 · Fun concept — pizza cooked at 400°C · casual lunch. ⚠️ Verify halal on arrival.</div>
+            </div>
+            <span class="halal-cert">Verify</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🍰 Snack — Dolce Tacubo · Daikanyama</div>
+              <div class="halal-desc">Michelin patisserie spin-off · financiers · cream puffs · gelato · mostly takeout · opens 11:00 · 5 min walk from Shibuya. Pure dairy/egg — no halal concern.</div>
+            </div>
+            <span class="halal-cert">Safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🥩 Dinner — GYUMON Jinnan · Shibuya</div>
+              <div class="halal-desc">⭐4.8 · Certified halal · Jinnan, Shibuya. Good energy dinner before Street Kart at 19:45. Don't eat too much — you're racing after!</div>
+            </div>
+            <span class="halal-cert">Certified</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 16 -->
+    <div class="day-card">
+      <div class="day-header" onclick="tog(this)">
+        <div class="day-date-box" style="background:#EEF2FD">
+          <div class="day-date-n" style="color:var(--tokyo)">2</div>
+          <div class="day-date-m" style="color:var(--tokyo)">May</div>
+        </div>
+        <div class="day-info">
+          <div class="day-title">Last morning + Narita departure</div>
+          <div class="day-meta">Saturday · Free until 19:30 · Flight 22:30</div>
+        </div>
+        <svg class="day-caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="day-body">
+        <div class="note-strip">Hotel checkout. Store bags at the front desk or coin lockers at Tokyo Station. Leave for Narita by 19:30 at the latest — Narita Express (N'EX) from Tokyo Station is ~55–60 min.</div>
+        <div class="stop-flow">
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">1</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Ueno Park + last morning <span class="stop-dur">2 hrs</span></div>
+              <div class="stop-desc">Large park with museums, temples, a zoo, and Shinobazu Pond. Relaxed and close to Kanda — easy last morning stroll. JR from Kanda → Ueno (1 stop, 3 min).
+              <div class="food-inline">☕ <span><strong>Breakfast on the way — Age.3 GINZA.</strong> ⭐4.7 · café · Ginza · on route to Tokyo Station. Light and easy.</span></div></div>
+            </div>
+          </div>
+          <div class="stop">
+            <div class="stop-left">
+              <div class="stop-number" style="background:var(--tokyo)">2</div>
+              <div class="stop-vline" style="background:var(--tokyo-m)"></div>
+            </div>
+            <div class="stop-right">
+              <div class="stop-name">Tokyo Station Gransta basement · last shopping <span class="stop-dur">1 hr</span></div>
+              <div class="stop-desc">World-class food gift shops and Japanese confectionery in the station basement. Buy all your omiyage (gift souvenirs) here before you leave — Tokyo Banana, Kit-Kat variety packs, Shiroi Koibito, and Yoku Moku cookies are all excellent options.
+              <div class="food-inline">🐟 <span><strong>Last Japanese meal — Nihonbashi Kaisen Don Tsujihan.</strong> ⭐4.5 · ¥1,000–2,000 · seafood rice bowl · right here in the Gransta basement. Then head to Narita. 🇯🇵</span></div></div>
+            </div>
+          </div>
+          <div class="move">
+            <div class="move-left">
+              <div class="move-icon-wrap" style="background:#EEF2FD;border-color:var(--tokyo-m);color:var(--tokyo)">🚃</div>
+            </div>
+            <div class="move-right">
+              <div class="move-label">Narita Express (N'EX) from Tokyo Station</div>
+              <div class="move-detail">Tokyo Station → Narita Airport · ~55 min · ¥3,070. Depart by 20:00 at the latest for a 22:30 flight.</div>
+              <span class="move-time" style="background:#EEF2FD;color:var(--tokyo)">Leave by 20:00</span>
+            </div>
+          </div>
+        </div>
+                <div class="hotel-end-block" style="margin:0 22px 20px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#EEF2FD;border:1px solid #2B4B8B30;border-radius:12px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:#2B4B8B;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">🌙</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#2B4B8B">Sotetsu Fresa Inn Tokyo Kanda</div>
+            <div style="font-size:11px;color:var(--ink3);margin-top:1px">Check out this morning. Store bags at hotel or Tokyo Station coin lockers for the day.</div>
+          </div>
+        </div>
+        <div class="halal-block">
+          <button class="halal-toggle" onclick="togHalal(this)">
+            <span class="halal-toggle-label">🍽 Your food plan for today</span>
+            <span class="halal-caret">▼</span>
+          </button>
+          <div class="halal-body">
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">☕ Breakfast — Age.3 GINZA</div>
+              <div class="halal-desc">⭐4.7 · ¥1–1,000 · Café · Ginza · on route from Ueno to Tokyo Station. Light and easy start to the last day.</div>
+            </div>
+            <span class="halal-cert">Safe</span>
+          </div>
+          <div class="halal-row">
+            <div class="halal-dot"></div>
+            <div style="flex:1">
+              <div class="halal-name">🐟 Lunch — Nihonbashi Kaisen Don Tsujihan</div>
+              <div class="halal-desc">⭐4.5 · ¥1,000–2,000 · Seafood rice bowl · Tokyo Station Gransta basement. Your last Japanese meal before Narita. Pure seafood — no halal concern.</div>
+            </div>
+            <span class="halal-cert">Seafood</span>
+          </div>
+          </div>
+        </div>
+        <div class="flight-card" style="margin:12px 0 8px">
+          <div class="flight-route">NRT <span class="flight-arr">→</span> RUH</div>
+          <div class="flight-legs">
+            <div class="flight-leg"><b>2 May</b> NRT → DXB · 22:30–04:50 · Emirates · 2h20 layover</div>
+            <div class="flight-leg"><b>3 May</b> DXB → RUH · 07:10–08:05 · Emirates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div style="text-align:center;padding:60px 0 20px;border-top:1px solid var(--border);margin-top:48px">
+    <div style="font-family:'Playfair Display',serif;font-size:36px;font-style:italic;color:var(--ink3)">Have a wonderful trip</div>
+    <div style="font-size:12px;color:var(--ink4);margin-top:10px;letter-spacing:0.08em">Osaka · Hiroshima · Kyoto · Tokyo · April – May 2026</div>
+  </div>
+
+
+<script>
+function togHalal(btn){
+  btn.closest('.halal-block').classList.toggle('open');
+}
+function tog(h){
+  const c=h.closest('.day-card');
+  c.classList.toggle('open');
+}
+const secs=document.querySelectorAll('.city-section');
+const tabs=document.querySelectorAll('.nav-tab');
+const obs=new IntersectionObserver(e=>{
+  e.forEach(en=>{
+    if(en.isIntersecting){
+      const id=en.target.id;
+      tabs.forEach(t=>t.classList.remove('on'));
+      const a=document.querySelector('.t-'+id);
+      if(a)a.classList.add('on');
+    }
+  });
+},{rootMargin:'-25% 0px -65% 0px'});
+secs.forEach(s=>obs.observe(s));
+</script>
+
+
+</div>
+
+</body>
+</html>
